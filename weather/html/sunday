@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="sunday.css">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="all">
+        <nav>
+            <div class="container">
+                <div class="north">北部</div>
+                <div class="midle">中部</div>
+                <div class="south">南部</div>
+                <div class="east">東部</div>
+                <div class="land">離島</div>
+            </div>
+        </nav>
+        <main>
+            <dv class="allcard">
+                <!-- 北部 -->
+                <div class="card">
+                    <div class="rain">
+                            <img src="./images/rain.svg" alt="">
+                    </div>
+                    <div class="city">台北市</div>
+                    <div class="normal">最高溫度:</div>
+                    <div class="normal">最低溫度:</div>
+                    <div class="normal">天氣:</div>
+                    <div class="normal">舒適度:</div>
+                </div>
+                <!-- <div class="card">
+                    <div class="sun">
+
+                    </div>
+                    <div class="city">新北市</div>
+                    <div class="normal">最高溫度:</div>
+                    <div class="normal">最低溫度:</div>
+                    <div class="normal">天氣:</div>
+                    <div class="normal">舒適度:</div>
+                </div>
+                <div class="card">
+                    <div class="cloud">
+                            <img src="./images/cloud.svg" alt="">
+                    </div>
+                    <div class="city">基隆市</div>
+                    <div class="normal">最高溫度:</div>
+                    <div class="normal">最低溫度:</div>
+                    <div class="normal">天氣:</div>
+                    <div class="normal">舒適度:</div>
+                </div>
+                <div class="card">
+                    <div class="rain">
+                            <img src="./images/rain.svg" alt="">
+                    </div>
+                    <div class="city">宜蘭縣</div>
+                    <div class="normal">最高溫度:</div>
+                    <div class="normal">最低溫度:</div>
+                    <div class="normal">天氣:</div>
+                    <div class="normal">舒適度:</div>
+                </div>
+                
+                <div class="card">
+                    <div class="sun">
+                            <img src="./images/sun.svg" alt="">
+                    </div>
+                    <div class="city">新竹市</div>
+                    <div class="normal">最高溫度:</div>
+                    <div class="normal">最低溫度:</div>
+                    <div class="normal">天氣:</div>
+                    <div class="normal">舒適度:</div>
+                </div> -->
+                
+                <!-- 中部 -->
+                <!-- 南部 -->
+                <!-- 東部 -->
+                <!-- 離島 -->
+
+
+            </dv>
+            <div id="taiwan">
+                <img src="./images/text.jpg" alt="">
+            </div>
+        </main>
+        <footer>
+            <!-- <dv class="copy">Copyright © 2007-2022</dv> -->
+        </footer>
+    </div>
+    <script src="../js/sunday.js">
+  
+    </script>
+</body>
+
+</html>

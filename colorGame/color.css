@@ -1,0 +1,172 @@
+/* 初始化用 */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#all {
+    margin: 0px, auto;
+    width: 100%;
+    height: 100vh;
+    background-color: #fef8c7;
+}
+/* 建議用文案 */
+.title {
+    margin: 0px;
+    text-align: center;
+    font-size: 36px;
+    font-family: "標楷體", Arial, Helvetica, sans-serif;
+
+}
+.content {
+    margin: 0px;
+    font-size: 24px;
+    font-family: "標楷體", Arial, Helvetica, sans-serif;
+}
+/* header內 */
+#header {
+    width: 100%;
+    height: 10vh;
+    /* background-color:rgb(255, 100, 10); */
+}
+/* 時間條外框 */
+#bloodMain{
+    width: 60%;
+    height: 28px;
+    margin: 0px auto;
+    background: rgba(10,10,10,0);
+    overflow: hidden;
+    /* overflow超過邊框時隱藏 */
+
+}
+/* 時間條 */
+#bloodProgress{
+    width: 100%;
+    height: 28px;
+    margin-top: 1px;
+    background: rgb(234, 197, 8);
+}
+/* main內 */
+#main {
+    width: 100%;
+    height: calc(80vh - 50px);
+    /* background-color: brown; */
+    margin: 0px;
+    padding-top: 50px;
+    position: relative;
+}
+#score{
+    width:300px ;
+    height:55px ;
+    position: absolute;
+    left:20%;
+    top:-4%;
+}
+/* 放置格子的區域 */
+#game {
+    /* 長寬 */
+    width: 500px;
+    height: 500px;
+    /* 排版 */
+    padding: 10px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* 顏色框線 */
+    background-color: white;
+    border-color: antiquewhite;
+    border-radius: 20px;
+}
+/* 色弱遊戲內部格子 */
+.gameColor {
+    /* 長寬 */
+    width: calc(100% / 2 - 6px);
+    height: calc(100% / 2 - 6px);
+    /* 排版 */
+    text-align: center;
+    line-height:2 ;
+    /* 顏色框線 */
+    border: white solid;
+    background-color: rgb(27, 34, 34,0.1);
+    /* 字型 */
+    font-size: 124px;
+}
+/* 開始按鈕等等 */
+#button {
+    display: flex;
+    justify-content: center;
+}
+/* 重新開始按鈕 */
+.restart {
+    /* 長寬 */
+    width: 100px;
+    height: 30px;
+    /* 排版 */
+    text-align: center;
+    margin: auto;
+    /* 顏色與框線 */
+    background: #4fdf8f;
+    border: dashed;
+    border-radius: 30px;
+    /*使用者體驗 */
+    cursor: pointer;
+}
+#start {
+    /* 長寬 */
+    width: 100px;
+    height: 30px;
+    /* 排版 */
+    line-height: 1;
+    text-align: center;
+    margin-top: 20px;
+    /* 顏色與框線 */
+    background-color: darkmagenta;
+    color: whitesmoke;
+    border-radius: 20px;
+    /* 字型 */
+    font-size: 24px;
+    /* 使用者體驗 */
+    cursor: pointer;
+}
+#chater {
+    /* 長寬 */
+    width: 100px;
+    height: 30px;
+    /* 排版 */
+    display: none;
+    text-align: center;
+    line-height: 1;
+    margin-top: 20px;
+    /* 顏色與框線 */
+    background-color: darkmagenta;
+    color: whitesmoke;
+    border-radius: 20px;
+    /* 字型 */
+    font-size: 24px;
+    /* 使用者體驗 */
+    cursor: pointer;
+}
+#footer {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(27, 34, 34);
+}
+/* 結束視窗 */
+#endGame {
+    /* 長寬 */
+    width: 500px;
+    height: 500px;
+    /* 排版 */
+    display: flex;
+    padding: 10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* 背景與框線 */
+    background-color: #35dad7;
+    border-radius: 20px;
+    border-color: antiquewhite;
+}

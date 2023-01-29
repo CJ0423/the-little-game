@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+var dothis=document.getElementById("dothis")
+var text="";
+for(i=1;i<=21;i++){
+  for(k=0;k<=2;k++){
+   text+=`document.querySelector("#cleanArea${k}${i}").addEventListener("mouseover",function(){
+        changeColor[${i}].style="fill:orangered"
+        document.querySelector("#cleanArea${k}${i}").style="background:orangered"})
+    document.querySelector("#cleanArea${k}${i}").addEventListener("mouseout",function(){
+        changeColor[${i}].style=""
+        document.querySelector("#cleanArea${k}${i}").style=""})`
+  }
+}
+console.log(text)
+  </script>
+</head>
+<body>
+  <div id="dothis"></div>
+</body>
+</html>

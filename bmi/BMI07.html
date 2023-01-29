@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ＢＭＩ計算</title>
+    <style>
+        /* 測試 */
+        body {
+            /* 這會產生爆版的問題 很可怕的，理論上寬度要正常 */
+
+            margin: 0px;
+            background-color: papayawhip;
+
+        }
+
+        .output-area {
+            position: absolute;
+            visibility: hidden;
+            /* 這是隱藏 */
+
+            opacity: 0;
+
+            background-color: aquamarine;
+            width: 500px;
+            height: 500px;
+            top: 0px;
+            left: 0px;
+            border-radius: 10%;
+
+        }
+
+        #push {
+            font-size: 24px;
+        }
+
+        #all {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            top: 200px;
+
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid;
+            border-radius: 10%;
+            font-size: 20px;
+        }
+        @media (max-width:1) {
+            
+        }
+
+        .number {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ans {
+            font-size: 24px;
+            text-align: center;
+
+            position: absolute;
+            top: 20%;
+
+            width: 500px;
+            height: 500px;
+
+
+
+        }
+
+        .advice {
+            word-wrap: wrap;
+        }
+    </style>
+</head>
+<script>
+
+
+    function fade() {
+
+        //防呆機制
+        var height = document.querySelector("#height").value;
+
+        var weight = document.querySelector("#weight").value;
+        var trueHeight = height / 100;
+        if (isNaN(trueHeight) || (trueHeight == 0)) {
+            alert("請輸入數字")
+
+        }
+        else if (height >= 273) {
+            alert("歷史上最高的人：羅伯特·潘興·瓦德羅（身長272公分），你竟然能超越他呀？別鬧了請輸入正確的數字")
+        }
+        else if (height <= 40) {
+            alert("剛出生的小朋友平均身高約為50，太棒了原來是天才兒童（？好啦小神童別鬧囉")
+        }
+        else if (weight >= 500) { alert("歷史上最重的人：Carl Thompson（體重413公斤），你竟然能超越他呀？別鬧了請輸入正確的數字") }
+
+        else if (weight <= 3) { alert("剛出生的小嬰兒平均體重約為3公斤，上輩子沒喝夢婆湯（？ 一出生就能玩電腦了呀，好啦小神童別鬧囉") }
+
+
+        //進入計算畫面
+        else {
+            //closed：是輸出的畫面;
+            var closed = document.getElementById('closed');
+            //原始透明度是0
+            var opacity = 0;
+            //控制淡入
+            var clock = setInterval(function () {
+                // setInterval:持續進行，以此為範例就是每50毫秒提升一次0.1透明度，再變成1的時候跳出，以此達成淡出效果，此外值得注意的是就算函示正在執行，當我們一告訴電腦要做些什麼的時候，他就已經開始往後面的部分去執行了，這也是為什麼這一題我們即使，將顯示放在後面一樣能正常運行。
+                opacity = opacity + 0.1;
+                if (opacity <= 1) {
+                    closed.style.opacity = opacity;
+                } else {
+                    clearInterval(clock);
+
+                }
+            }, 50);
+
+            var height = document.querySelector("#height").value;
+            var weight = document.querySelector("#weight").value;
+            var trueHeight = height / 100;
+            //顯示出closed的方匡
+            document.querySelector(".output-area").style.visibility = "visible";
+
+
+
+
+            var BMI = weight / ((trueHeight) * (trueHeight))
+            //小數點給予兩位
+            BMI = BMI.toFixed(2);
+            document.querySelector("#BMI").innerHTML = BMI;
+
+            if (BMI < 18.5) {
+
+
+                document.querySelector(".shape").innerHTML = "過輕";
+                document.querySelector(".advice").innerHTML = "請增加一些飲食，並且詢問醫生尋找專業的幫忙吧";
+            }
+            else if (BMI < 24) {
+
+                document.querySelector(".shape").innerHTML = "正常範圍";
+                document.querySelector(".advice").innerHTML = "盡量保持喔";
+            }
+            else if (BMI == 24 || BMI < 27) {
+
+                document.querySelector(".shape").innerHTML = "過重";
+                document.querySelector(".advice").innerHTML = "設法增加一點運動量吧，肥胖是不好的開始喔";
+            }
+            else if (BMI == 27 || BMI < 30) {
+
+                document.querySelector(".shape").innerHTML = "輕度肥胖";
+                document.querySelector(".advice").innerHTML = "多運動控制飲食，不能再胖下去了";
+            }
+            else if (BMI == 30 || BMI < 35) {
+
+                document.querySelector(".shape").innerHTML = "中度肥胖";
+                document.querySelector(".advice").innerHTML = "建議從事游泳相關運動，體重太重傷害膝蓋";
+            }
+            else if (BMI >= 35) {
+
+                document.querySelector(".shape").innerHTML = "重度肥胖";
+                document.querySelector(".advice").innerHTML = "建議去看醫生";
+
+
+            }
+
+        }
+    }
+
+
+    function closed() {
+
+        var closed = document.getElementById('closed');
+        var opacity = 1;
+        //setIntevrval這個函式可以讓程式在一段時間內持續進行，以此題來說，就是每50毫秒做一次
+        var clock = setInterval(function () {
+            opacity = opacity - 0.1;
+            if (opacity >= 0) {
+                closed.style.opacity = opacity;
+            } else {
+                clearInterval(clock);
+                document.querySelector(".output-area").style.visibility = "hidden";
+            }
+        }, 50);
+    }
+
+</script>
+<!-- script標籤要放的位置基本上要放在body上面
+但為什麼沒有報告錯誤呢，但為什麼沒有這樣做的時候卻沒有問題是因為，資料抓取不到的問題 -->
+
+<body>
+    <div id="all">
+        <form>
+            <div class="all">
+                <h1>BMI計算工具</h1>
+                <div>身高<input id="height" type="text"></div>
+                <div>體重<input id="weight" type="text"></div>
+                <br>
+                <div class="number">
+                    <button type="button" id="push" onclick="fade()">計算</button>
+                    <button style="margin-left:50px;font-size: 24px;" type="reset">重置</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="closed" class="output-area">
+            <div onclick="closed() " style="background-color:RED ;
+            float: right;
+            border:  5px solid #666;
+            width: 40px;
+            height: 30px;font-size: 28px;
+            border-radius:50%;
+            line-height: 1;
+            text-align: center;
+            color:white;
+            cursor: pointer;
+          ">x</div>
+
+
+            <div class="ans">
+                <div>計算結果</div>
+                <div class="bmi">您的BMI為:<span id="BMI">27.5</span></div>
+                <div class="shape">您的身體狀態為:過胖</div>
+                <div>給您的建議:</div>
+                <div class="advice">多走動避免運動不足</div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- 本次練習已經修正，body: margin:0 第一大框架all設定為margin:auto就可以做到滿版的效果了，此外未來需要更改的習慣有，if else的位置 css的空格此外如果再html內，就會需要:盡量不要使用大小寫來做區分，這是因為在html與css中他們是不能區分大小寫的喔! -->
+    </div>
+</body>
+
+</html>

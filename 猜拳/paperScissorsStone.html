@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡比 vs Irock</title>
+    <link rel="stylesheet" href="./paperScissorsStone.css">
+</head>
+
+<body>
+    <div id="endGame">
+        <div id="gameStart">
+            <img id="blue" src="./images/藍紅_左.svg" alt="">
+            <img id="red" src="./images/藍紅_右.svg" alt="">
+            <img id="vs" src="./images/VS.svg" onclick="startGame()" alt="">
+            <img id="total" src="./images/end game.gif" alt="">
+            <img id="sub" src="./images/end.gif" alt="">
+            <button id="restart" onclick="restart()">重新開始</button>
+            <div id="frame">
+                <div id="all">
+
+                    <div id="bloodComputer">
+                        <!-- 被刪掉的main id原本的位置 -->
+                        <div id="blood">
+                            <div id="background">
+                                <div id="progress"> </div>
+                                <div id="progres"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="kirby" src="./images/101px-坐传送之星的卡比.jpeg" alt="">
+
+
+
+
+                </div>
+                <!-- 移除了id player -->
+                <div id="bloodPlayer">
+                    <div id="background">
+                        <div id="progress1"> </div>
+                        <div id="progres1"></div>
+                    </div>
+                </div>
+
+                <img class="Irock" src="./images/九陶.svg" alt="">
+
+                <div id="footer">
+
+                    <div id="content">星之卡比現身<br>請嘗試在他把你吃掉之前試著打贏他吧！</div>
+                    <div id="button">
+                        <div style="margin-left:85px">技能</div>
+                        <button id="attack" onclick="attack()">攻擊</button>
+                        <button id="active" onclick="active()">卍解</button><br>
+                        <button id="good" onclick="good()">道具</button>
+                        <button id="escape" onclick="escape()">逃跑</button>
+
+                        <button id="R" name="石頭" onclick="hit(R)">石頭</button>
+                        <button id="S" name="剪刀" onclick="hit(S)">剪刀</button>
+                        <button id="P" name="布" onclick="hit(P)">布</button>
+
+
+                    </div>
+                </div>
+            </div>
+            <script src="./paperScissorsStone.js"></script>
+</body>
+
+</html>

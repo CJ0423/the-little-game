@@ -1,0 +1,42 @@
+
+main{display: flex;}
+.allcard{
+    display: flex;
+}
+.card{
+    width: 140px;
+    height: 180px;
+    background-color:cornflowerblue;
+    border-radius:8px ;
+    display: flex;
+    margin-left:10px ;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-family: "標楷體",Arial, Helvetica, sans-serif;
+    border: solid 3px;
+    border-color: black ;
+}
+.card:hover{
+    width: 160px;
+    height: 200px;
+    border: 5px solid gold;
+}
+
+.normal{font-size: 16px;}
+
+.sun{
+    width: 40px;
+    height: 40px;
+    background-image: url("./images/sun.svg")  ;
+}
+.rain{
+    width: 40px;
+    height: 40px;
+    background-image: url("./images/rain.svg")  ;
+}
+.cloud{
+    width: 40px;
+    height: 40px;
+    background-image: url("./images/cloud.svg")  ;
+}

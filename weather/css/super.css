@@ -1,0 +1,128 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+svg {
+  margin-top: 50px;
+  height: calc(100vh - 190px);
+}
+.all{
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background:linear-gradient(177.8524145717015deg, rgba(108, 154, 155,1) 8.591248665955177%,rgba(108, 154, 155,1) 10.725720384204909%,rgba(6, 201, 169,1) 93.9701173959445%)  
+}
+#time{
+  font-size: 32px;
+  text-align: center;
+  color: aliceblue;
+}
+main{
+  display: flex;
+  overflow: hidden;
+}
+.mainright{
+  width:calc(100%  );
+  height: calc(100vh - 100px) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainleft{width: calc(50% - 120px );
+  min-width: 622px;
+  display: none;
+} 
+#taiwan{
+width: auto;
+z-index: 1;
+} 
+path {
+  stroke: rgb(255, 254, 254);
+  fill: #C5D8D1;
+  transition: 0.5s;
+  cursor: pointer;
+}
+path:hover {
+  /* fill: #1A5840; */
+  transform: translate(-5px, -5px);
+}
+
+.title_area {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: white;
+  font-size: 30px;
+}
+
+h1 span {
+  color: #B99362;
+  padding-left: 10px;
+}
+
+hr {
+  width: 100px;
+  margin-left: 0;
+  border: none;
+  border-bottom: solid 2px white;
+}
+
+.forcast h2, .forcast h4, .forcast h5 {
+  margin: 0;
+}
+.forcast h2 {
+  margin-top: 20px;
+}
+
+/* 卡片區域 */
+.allcards{
+  width: 100%;
+  display: flex;
+  padding: 2px;
+  background-color: #741a4b;
+  
+}
+.card {
+  width: 150px;
+  height: 180px;
+  border: none;
+  background: linear-gradient(177.8524145717015deg, rgba(89, 89, 89,0.2) 8.591248665955177%,rgba(253, 252, 252, 0.3) 93.9701173959445%);
+  float: left;
+  margin: 15px;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.rain img {
+  width: 60px;
+  height: 60px;
+}
+
+.card:hover {
+  
+  border-bottom: #414040 solid 3px;
+  border-right: #757777 solid 3px;
+}
+
+.normal {
+  font-size: 14px;
+   color: white;
+}
+
+.city {
+  font-size: 16px;
+  color: white;
+}
+.sun {
+  width: 60px;
+  height: 60px;
+  background-image: url("./images/sun.svg");
+}
+.cloud {
+  width: 60px;
+  height: 60px;
+  background-image: url("./images/cloud.svg");
+}
+

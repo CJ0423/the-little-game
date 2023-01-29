@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <script>
+var count = 7;
+//倒數計時器
+var timerId = setInterval(timer, 1000); // 每隔1000毫秒，呼叫一次timer。
+function timer() {
+  count--; // 每次執行timer就把count減1。
+  console.log(count)
+  // 若已計數完畢，則停止計時。
+  if (count == 0) 
+     clearInterval(timerId);
+}
+    </script>
+</body>
+</html>
+
+
+<div style='width:100px;background:#4fdf8f;;border:dashed;text-align:center; margin:auto;cursor: pointer;border-radius:30px;'onclick=restart()>再玩一次</div>
