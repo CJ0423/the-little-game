@@ -1,6 +1,6 @@
-function find(){
-    console.log("hi")
+function find(e){
+    console.log(e)
 }
 const bgi=document.querySelector("#bgi")
 
-bgi.addEventListener("click",find)
+bgi.addEventListener("mousemove",find)
