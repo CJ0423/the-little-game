@@ -13,19 +13,19 @@
 }
 .adjust-center #bgi {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 20%;
   background-image: url(./img/背景.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.adjust-center #bgi #word {
-  position: relative;
-  top: 30%;
+.adjust-center #bgi #words {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.adjust-center #bgi #word div {
+.adjust-center #bgi #words .word {
   font-size: 16px;
   text-align: center;
   width: auto;
@@ -34,7 +34,7 @@
   border: 1px solid black;
 }
 .adjust-center #bgi #glass {
-  width: 170px;
+  width: 180px;
   height: 70px;
   position: absolute;
   top: 50%;
@@ -43,4 +43,14 @@
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 2;
+}
+.adjust-center #answers {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 40%;
+}
+.adjust-center #answers .answer {
+  font-size: 50px;
+  margin-left: 10px;
 }/*# sourceMappingURL=glass.css.map */
