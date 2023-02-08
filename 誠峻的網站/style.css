@@ -152,7 +152,6 @@ hr {
 }
 
 .btn-topsales:before {
-  -webkit-animation: move-out 0.3s;
   animation: move-out 0.3s;
   background-image: linear-gradient(98.8442786828deg, rgb(49, 178, 207) 34.2997977755%, rgb(118, 152, 159) 136.3220424671%);
   content: "→";
@@ -168,17 +167,7 @@ hr {
 }
 
 .btn-topsales:hover:before {
-  -webkit-animation: move-in 0.3s forwards;
   animation: move-in 0.3s forwards;
-}
-
-@-webkit-keyframes move-in {
-  0% {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
 }
 @keyframes move-in {
   0% {
@@ -186,14 +175,6 @@ hr {
   }
   to {
     transform: translateX(100%);
-  }
-}
-@-webkit-keyframes move-out {
-  0% {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(200%);
   }
 }
 @keyframes move-out {
