@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.all {
+    // overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .adjust-button {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            width: 20%;
+            position: absolute;
+            left: 3%;
+            top: 5%
+        }
+
+        .rabbits {
+            width: 100%;
+            height: 100px;
+            position: relative;
+            top: -17%;
+            left:70%;
+            display: flex;
+            // background-color: #ED1A0A;
+            .rabbit-car {
+                .rabbit {
+                    background-image: url(../img/rabbit_b.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 100px;
+                    height: 100px;
+                    z-index: 1;
+                }
+                .car {
+                    position: relative;
+                    top: -20px;
+                    background-image: url(../img/car.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 100px;
+                    height: 100px;
+                    width: 100px;
+                    height: 100px;
+                    z-index: 3;
+                }
+            }
+        }
+
+        .btn-start {
+            width: 390px;
+            height: 190px;
+            border-radius: 50%;
+            position: absolute;
+            left: calc(50% - 195px);
+            top: calc(50% - 95px);
+            font-size: 50pt;
+            border: 10px double #fff;
+            background-color: #ED1A0A;
+            color: #fff;
+            animation: check 2s infinite;
+            transition: opacity 0.3s linear;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .btn-start:hover {
+            width: 410px;
+            height: 210px;
+            position: absolute;
+            top: calc(50% - 105px);
+            left: calc(50% - 205px);
+            font-size: 52pt;
+        }
+
+        .chat-btn {
+            position: relative;
+            top: 30%
+        }
+
+        .station-img {
+            width: 300px;
+            background-image: url();
+            position: absolute;
+            top: 30%;
+            // visibility: hidden;
+
+        }
+    }
+}
