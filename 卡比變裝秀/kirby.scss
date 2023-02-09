@@ -1,4 +1,18 @@
 .glass{
     width: 100px;
     position: absolute;
+    z-index: 2;
+}
+.suit{
+    width: 100px;
+    position: absolute;
+    z-index: 2;
+
+}
+.character{
+    width: 300px;
+    
+    position: absolute;
+    left:70%;
+    top:30%;
 }
