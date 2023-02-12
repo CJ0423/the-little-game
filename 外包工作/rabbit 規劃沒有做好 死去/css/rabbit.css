@@ -43,6 +43,30 @@
   height: 100px;
   z-index: 1;
 }
+.all .adjust-button .rabbits .rabbit-car .no {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+.all .adjust-button .rabbits .rabbit-car .no3 {
+  left: -620%;
+  top: -190%;
+}
+.all .adjust-button .rabbits .rabbit-car .no4 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  left: -700%;
+  top: -190%;
+}
 .all .adjust-button .rabbits .rabbit-car .b {
   background-image: url(../img/rabbit_b.svg);
 }

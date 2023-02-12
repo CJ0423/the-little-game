@@ -48,6 +48,35 @@
                     z-index: 1;
                   
                 }
+                .no{
+                    position: relative;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 100px;
+                    height: 100px;
+                    z-index: 1;
+                }
+                .no3{
+                   
+
+                    // 四台車 這樣
+                    left:  -620%;
+                    top: -190%;
+                }
+                .no4{
+                    position: relative;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 100px;
+                    height: 100px;
+                    z-index: 1;
+
+                    // 四台車 這樣
+                    left:  -700%;
+                    top: -190%;
+                }
                 .b{
                     background-image: url(../img/rabbit_b.svg);
                 }

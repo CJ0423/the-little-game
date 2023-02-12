@@ -10,12 +10,14 @@ let answer = []
 function start() {
     canCheck = false
     level = 1
+    car=0
     console.log(level)
     startBtn.style = "visibility:hidden"
     // 進入到遊戲中
     document.dispatchEvent(new Event("gameing"))
 }
 function chat() {
+    car=0
     canCheck = false
     if (level == 10) { return }
     level++
@@ -305,14 +307,39 @@ function moveRabbits(rabbit) {
 }
 // 記錄點擊的答案
 function add() {
+    // 請幫我修改
+    const rabbitCar = document.querySelectorAll('.rabbit-car');
+    console.table(rabbitCar)
+   
+    // 請幫我修改到這邊
+
     if (canCheck) {
         let answerIndex = answer.indexOf(this.classList[1]);
         if (answerIndex !== -1) {
             console.log("出去")
+            // car=car-1
             answer[answerIndex] = null
             console.table(answer)
+
         } else {
-            console.log("近來了啦")
+            this.style.visibility="hidden"
+            console.log(car)
+            if(rabbitCar.length==4){
+            rabbitCar[car].innerHTML += `<div class="rabbit ${this.classList[1]} no no4"></div>`;}
+            else if(rabbitCar.length==3){
+                rabbitCar[car].innerHTML += `<div class="rabbit ${this.classList[1]} no no3"></div>`;}
+            
+            let oldRabbits=document.querySelectorAll(".rabbit")
+            oldRabbits[0].addEventListener("click",add)
+            oldRabbits[1].addEventListener("click",add)
+            oldRabbits[2].addEventListener("click",add)
+            if(rabbitCar.length==4){
+            oldRabbits[3].addEventListener("click",add)}
+            car=car+1
+
+            // 請幫我修改
+
+            // 到這邊
             let emptyIndex = answer.indexOf(null);
             if (emptyIndex !== -1) {
                 answer[emptyIndex] = this.classList[1];
@@ -333,8 +360,12 @@ function go() {
 // 車車出發按鈕檢核正確與否
 goToNext.addEventListener("click", checkAnswer)
 function checkAnswer() {
-    let trueAnswer = document.querySelectorAll(".rabbit");
+    let trueAnswer = document.querySelectorAll(".no");
     let trueAnswerArray = [];
+
+
+
+    let check=true
     for (let i = 0; i < trueAnswer.length; i++) {
         let className = trueAnswer[i].classList[1];
         trueAnswerArray.push(className);
@@ -343,13 +374,18 @@ function checkAnswer() {
     console.log(trueAnswerArray)
     console.log(answer.length)
     if (answer.length != trueAnswerArray.length) {
-        return false
+        check= false
     }
     for (i = 0; i < trueAnswerArray.length; i++) {
         if (answer[i] != trueAnswerArray[i]) {
-            return false
+            check= false
         }
     }
-    console.log("正確")
-    return true
+if(check){
+    console.log("回答正確")
+    chat()
+}    
+else{
+    console.log("回答錯誤")
+}
 }
