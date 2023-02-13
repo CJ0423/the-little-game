@@ -4,12 +4,17 @@ const backgroun = document.querySelector(".all")
 const station = document.querySelector(".station-img")
 const rabbits = document.querySelector('.rabbits')
 const goToNext = document.querySelector('.go-to-next')
+const levelText=document.querySelector(".level")
+const textMessage=document.querySelector(".text-message")
+const boom=document.querySelector(".boom")
 let level = 0
 let canCheck = false
 let answer = []
 function start() {
     canCheck = false
     level = 1
+    textMessage.style.visibility="visible"
+    levelText.textContent=`Score:0`
     car=0
     console.log(level)
     startBtn.style = "visibility:hidden"
@@ -23,6 +28,7 @@ function chat() {
     level++
     console.log(level)
     document.dispatchEvent(new Event("gameing"))
+    levelText.textContent=`Score:${level-1}0`
 
 }
 startBtn.addEventListener("click", start)
@@ -56,7 +62,7 @@ function countCar(i) {
     let text = ""
     for (j = 0; j < i; j++) {
         text += `<div class="rabbit-car">
-        <div class="rabbit ${randomColors[j]}"></div>
+        <div class="rabbit ${randomColors[j]} no"></div>
         <div class="car"></div>
     </div>`
     }
@@ -325,11 +331,11 @@ function add() {
             this.style.visibility="hidden"
             console.log(car)
             if(rabbitCar.length==4){
-            rabbitCar[car].innerHTML += `<div class="rabbit ${this.classList[1]} no no4"></div>`;}
+            rabbitCar[car].innerHTML += `<div class="rabbit ${this.classList[1]} no4"></div>`;}
             else if(rabbitCar.length==3){
-                rabbitCar[car].innerHTML += `<div class="rabbit ${this.classList[1]} no no3"></div>`;}
+                rabbitCar[car].innerHTML += `<div class="rabbit ${this.classList[1]} no3"></div>`;}
             
-            let oldRabbits=document.querySelectorAll(".rabbit")
+            let oldRabbits=document.querySelectorAll(".no")
             oldRabbits[0].addEventListener("click",add)
             oldRabbits[1].addEventListener("click",add)
             oldRabbits[2].addEventListener("click",add)
@@ -340,11 +346,15 @@ function add() {
             // 請幫我修改
 
             // 到這邊
+            console.log(`現在是第幾關：1`+level)
             let emptyIndex = answer.indexOf(null);
             if (emptyIndex !== -1) {
                 answer[emptyIndex] = this.classList[1];
-            } else {
+            } else if(level<=5) {
                 answer.push(this.classList[1]);
+            }
+            else if(level>5){
+                answer.unshift(this.classList[1])
             }
             console.table(answer)
         }
@@ -372,8 +382,12 @@ function checkAnswer() {
     }
 
     console.log(trueAnswerArray)
-    console.log(answer.length)
-    if (answer.length != trueAnswerArray.length) {
+    console.log(trueAnswer)
+
+    console.log(trueAnswerArray.length)
+    console.log(trueAnswer.length)
+    
+    if (trueAnswer.length != trueAnswerArray.length) {
         check= false
     }
     for (i = 0; i < trueAnswerArray.length; i++) {
@@ -383,9 +397,11 @@ function checkAnswer() {
     }
 if(check){
     console.log("回答正確")
+
     chat()
 }    
 else{
+   boom.style.visibility="visible"
     console.log("回答錯誤")
 }
 }

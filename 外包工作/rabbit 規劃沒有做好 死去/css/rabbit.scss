@@ -26,6 +26,25 @@
             left: 3%;
             top: 5%
         }
+        .text-message{
+          visibility: hidden;
+          display: flex;
+          justify-content: center;
+          position:absolute;
+          left:75%;
+          top:3%;
+          font-size: 24px;
+          color: #f2f2f2;
+
+            .level{
+                z-index: 4;
+            }
+            .time{
+                margin-left: 50px;
+                z-index: 4;
+
+            }
+        }
 
         .rabbits {
             width: 100%;
@@ -58,9 +77,14 @@
                     z-index: 1;
                 }
                 .no3{
-                   
+                     position: relative;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 100px;
+                    height: 100px;
+                    z-index: 1;
 
-                    // 四台車 這樣
                     left:  -620%;
                     top: -190%;
                 }
@@ -169,5 +193,14 @@
             // visibility: hidden;
 
         }
+        .boom{
+            width: 150px;
+            position: absolute;
+            visibility: hidden;
+            left: 70px;
+            top:25%;
+            z-index: 5;
+           
+    }
     }
 }
