@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .notice-box {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 300px;
+  padding: 12px 24px;
+  background-color: #8B5E3C;
+  box-shadow: 0px 0px 10px #4b2700;
+}
+
+.notice-box-left {
+  width: 25%;
+  height: 100%;
+}
+
+.notice-box-left img {
+  width: 100%;
+  height: 100%;
+}
+
+.notice-box-right {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.notice-box-text {
+  width: 100%;
+  height: 75%;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.notice-box-arrows {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.notice-box-arrows span {
+  font-size: 36px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+</style>
+<body>
+    <div class="notice-box">
+        <div class="notice-box-left">
+          <img src="../img/rabbit_teacher.svg" alt="image">
+        </div>
+        <div class="notice-box-right">
+          <div class="notice-box-text">
+            嗨！我是兔兔老師。
+            我的兔兔學生等等會到草地玩耍，
+            但是他們很常會忘記上車的時間。
+
+            所以我我希望你可以協助我提醒他們上車。
+            不過由兔兔學生們年紀還小，可能會因為沒有坐到喜歡的位置而吵架，所以安排座位時一定要聽從我的指示喔！
+          </div>
+          <div class="notice-box-arrows">
+            <span class="iknow">我明白了</span>
+            <span class="previous">&lt;</span>
+            <span class="next">&gt;</span>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
