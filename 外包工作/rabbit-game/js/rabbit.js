@@ -465,6 +465,14 @@ function checkAnswer(y) {
 }
 
 function successful() {
+
+    let oldRabbits = document.querySelectorAll(".no")
+    oldRabbits[0].removeEventListener("click", add)
+    oldRabbits[1].removeEventListener("click", add)
+    oldRabbits[2].removeEventListener("click", add)
+    if (oldRabbits.length == 4) {
+        oldRabbits[3].removeEventListener("click", add)
+    }
     let baseleft = 60
     if (level >= 9) {
         baseleft = 33
