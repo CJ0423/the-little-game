@@ -10,7 +10,7 @@ const boom = document.querySelector(".boom")
 const reset = document.querySelector(".reset")
 
 let checkPassager = false
-let level = 9
+let level =   0 
 let canCheck = false
 let canCheckCar = false
 let answer = []

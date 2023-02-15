@@ -1,0 +1,33 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.all {
+  width: 100vw;
+  height: 100vh;
+  background-color: #34cc00;
+  padding-bottom: 1vw;
+}
+.all .adjust-button {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/my/background.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.all .trains .train {
+  width: 20%;
+  height: 20%;
+  background-image: url(../img/my/rabbitscar/car.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.all .rabbits .rabbit {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}/*# sourceMappingURL=rabbit.css.map */
