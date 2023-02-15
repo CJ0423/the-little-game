@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.all {
+    width: 100%;
+    height: 100vh;
+
+    .sky {
+        width: 100%;
+        height: 47%;
+        background-image: url(../img/background/SKY.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .title {
+            position: absolute;
+            width: 100%;
+            .title-text{
+                width: 20%;
+                float: left;
+            }
+        }
+        .clound {
+            width: 100%;
+            height: 47vh;
+            float: left;
+            background-image: url(../img/background/cloud.svg);
+            background-repeat: no-repeat;
+            // background-position:;
+            background-size: contain;
+            background-position: bottom;
+        }
+    }
+    .street {
+        float: left;
+        width: 100%;
+        height: 2%;
+        background-color: #999999;
+        z-index: 2;
+    }
+.stations{
+    display: flex;
+    justify-content: center;
+    .station {
+        width: 25%;
+        height: 33.8%;
+        // float: left;
+        position: absolute;
+        top:14%;
+        // left: 3%;
+        background-image: url(../img/station.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+    }
+    width: 100%;}
+
+    .allgrace {
+        width: 100%;
+        height: 53%;
+        background-color: #34CC00;
+
+        .grace {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/background/GREEN.svg);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 3;
+
+        }
+    }
+}

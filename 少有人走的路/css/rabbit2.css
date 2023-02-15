@@ -1,0 +1,71 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.all {
+  width: 100%;
+  height: 100vh;
+}
+.all .sky {
+  width: 100%;
+  height: 47%;
+  background-image: url(../img/background/SKY.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.all .sky .title {
+  position: absolute;
+  width: 100%;
+}
+.all .sky .title .title-text {
+  width: 20%;
+  float: left;
+}
+.all .sky .clound {
+  width: 100%;
+  height: 47vh;
+  float: left;
+  background-image: url(../img/background/cloud.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.all .street {
+  float: left;
+  width: 100%;
+  height: 2%;
+  background-color: #999999;
+  z-index: 2;
+}
+.all .stations {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.all .stations .station {
+  width: 25%;
+  height: 33.8%;
+  position: absolute;
+  top: 14%;
+  background-image: url(../img/station.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+.all .allgrace {
+  width: 100%;
+  height: 53%;
+  background-color: #34CC00;
+}
+.all .allgrace .grace {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/background/GREEN.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+}/*# sourceMappingURL=rabbit2.css.map */
