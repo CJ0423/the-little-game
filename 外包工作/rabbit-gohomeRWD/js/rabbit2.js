@@ -230,6 +230,26 @@ function moveCar() {
             }, 35)
         }, 6000)
     }
+    if (level >= 6) {
+        setTimeout(() => {
+           
+            centerMove = setInterval(() => {
+                rabbitsAns.style.left = `${baseRabbits}%`
+                cars.style.left = `${baseCars}%`
+
+                baseRabbits = baseRabbits - 0.5;
+                baseCars = baseCars - 0.5
+                if (baseCars <= 10) {
+                    clearInterval( centerMove)
+                }
+            },35)
+        }
+            , 7000) //原本是11500
+                    // 多三秒為14500
+                    // 多五秒為16500
+    }
+    
+
 
     if (level < 6) {
         setTimeout(() => {
@@ -256,6 +276,24 @@ function moveCar() {
         }
             , 14500)
     }
+    if (level >= 6) {
+        setTimeout(() => {
+           
+            lastMove = setInterval(() => {
+                rabbitsAns.style.left = `${baseRabbits}%`
+                cars.style.left = `${baseCars}%`
+
+                baseRabbits = baseRabbits +0.5;
+                baseCars = baseCars + 0.5
+                if (baseCars >= 32) {
+                    clearInterval( lastMove)
+                }
+            }, 35)
+        }
+            , 11000) //原本是11500
+                    // 多三秒為14500
+                    // 多五秒為16500
+    }
     if(level>=6){
         setTimeout(() => {
            
@@ -279,7 +317,7 @@ function moveCar() {
 
             }, 35)
         }
-            , 14500) //原本是11500
+            , 15500) //原本是11500
                     // 多三秒為14500
                     // 多五秒為16500
     }
@@ -386,10 +424,11 @@ function rabbitWalk(j, i) {
 
 
     setTimeout(() => {
+        console.log("可以點了")
         rabbits.forEach(function (value, index, array) {
             array[index].addEventListener("click", choseRabbit);
         });
-    }, 2000);
+    }, 5000);
 
 
   
