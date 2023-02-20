@@ -1,0 +1,254 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.allimg {
+  width: 100%;
+  height: 100vh;
+  min-width: 375px;
+  min-height: 239px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  background-color: aquamarine;
+}
+.allimg .all {
+  width: 1280px;
+  height: 720px;
+  position: relative;
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.allimg .all .text {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(27, 147, 255);
+  position: absolute;
+  top: 0%;
+}
+.allimg .all .text .title {
+  width: 20%;
+  height: 100%;
+  background-image: url(../img/title.svg);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.allimg .all .text .score {
+  font-size: 16px;
+  width: 30%;
+  height: 100%;
+  line-height: 2;
+  color: rgb(2, 2, 2);
+}
+.allimg .all .text .chat {
+  display: none;
+}
+.allimg .all .notice-box {
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 300px;
+  min-width: 268px;
+  min-height: 116px;
+  padding: 1% 2%;
+  background-color: #8B5E3C;
+  box-shadow: 0px 0px 10px #4b2700;
+  position: absolute;
+  left: calc(50% - 175px);
+  top: calc(50% - 150px);
+  z-index: 100;
+  font-size: 22px;
+}
+.allimg .all .notice-box .notice-box-left {
+  width: 25%;
+  height: 100%;
+}
+.allimg .all .notice-box .notice-box-left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.allimg .all .notice-box .notice-box-right {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2%;
+}
+.allimg .all .notice-box .notice-box-right .notice-box-text {
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+}
+.allimg .all .notice-box .notice-box-right .notice-box-arrows {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+.allimg .all .notice-box .notice-box-right .notice-box-arrows .iknow {
+  padding: 1% 1%;
+  font-size: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #da660d;
+  border-radius: 8%;
+  cursor: pointer;
+}
+.allimg .all .notice-box .notice-box-right .notice-box-arrows .iknow:hover {
+  background-color: #ecf00b;
+  border-top: 2px solid #cdd00c;
+  border-left: 2px solid #cdd00c;
+}
+.allimg .all .notice-box .notice-box-right .notice-box-arrows .iknow2 {
+  visibility: hidden;
+}
+.allimg .all .btn {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  min-width: 52px;
+  min-height: 18px;
+  top: 88%;
+  left: -6%;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+}
+@media (max-width: 1200px) {
+  .allimg .all .btn {
+    font-size: 12px;
+  }
+}
+@media (max-width: 630px) {
+  .allimg .all .btn {
+    font-size: 5px;
+  }
+}
+.allimg .all .btn .go-home {
+  display: none !important;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 1% 1%;
+  display: flex;
+  align-items: center;
+  background-color: #edb611;
+  border-radius: 8%;
+  cursor: pointer;
+}
+.allimg .all .btn .go-home:hover {
+  background-color: #ecf00b;
+}
+.allimg .all .btn .reset {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  margin-left: 10%;
+  padding: 1% 1%;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/howtoplay/button1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 8%;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+.allimg .all .btn .reset:hover {
+  background-image: url(../img/howtoplay/button2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.allimg .all .item {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: 23%;
+  overflow: visible;
+}
+.allimg .all .item .station {
+  width: 27%;
+  height: 90%;
+  position: absolute;
+  background-image: url(../img/station.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 9;
+}
+.allimg .all .item .rabbit-car {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 16%;
+  overflow: visible;
+}
+.allimg .all .item .rabbit-car .rabbits {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  position: absolute;
+  left: 99.5%;
+  overflow: visible;
+}
+.allimg .all .item .rabbit-car .rabbits .rabbit {
+  width: 5%;
+  height: 100%;
+  margin-left: 1%;
+  position: relative;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: visible;
+}
+.allimg .all .item .rabbit-car .rabbits .b {
+  background-image: url(../img/rabbit_b.svg);
+}
+.allimg .all .item .rabbit-car .rabbits .g {
+  background-image: url(../img/rabbit_g.svg);
+}
+.allimg .all .item .rabbit-car .rabbits .p {
+  background-image: url(../img/rabbit_p.svg);
+}
+.allimg .all .item .rabbit-car .rabbits .r {
+  background-image: url(../img/rabbit_r.svg);
+}
+.allimg .all .item .rabbit-car .rabbits .y {
+  background-image: url(../img/rabbit_y.svg);
+}
+.allimg .all .item .rabbit-car .cars {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  position: absolute;
+  left: 100%;
+  top: 38%;
+}
+.allimg .all .item .rabbit-car .cars .car {
+  width: 20.5%;
+  height: 70%;
+  background-image: url(../img/car.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}/*# sourceMappingURL=rabbit1.css.map */
