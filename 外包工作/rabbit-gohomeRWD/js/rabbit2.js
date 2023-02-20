@@ -51,7 +51,7 @@ function start() {
     count = 0
     goHome.style.visibility = "hidden"
     iknow.style.visibility = "hidden"
-    level = 5
+    level = 1
     checkIknow = 1
     notice.style.visibility = "hidden"
     btn.style.visibility = "visible"
@@ -239,7 +239,7 @@ function moveCar() {
 
                 baseRabbits = baseRabbits - 0.5;
                 baseCars = baseCars - 0.5
-                if (baseCars <= 10) {
+                if (baseCars <= 0) {
                     clearInterval( centerMove)
                 }
             },35)
@@ -290,7 +290,7 @@ function moveCar() {
                 }
             }, 35)
         }
-            , 11000) //原本是11500
+            , 9700) //原本是11500
                     // 多三秒為14500
                     // 多五秒為16500
     }
