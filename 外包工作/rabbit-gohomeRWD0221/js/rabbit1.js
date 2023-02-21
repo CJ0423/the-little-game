@@ -30,6 +30,8 @@ function resize_canvas() {
     }
     if (window.innerWidth < 700) {
       fontSize = 10;
+    }if(window.innerWidth<537){
+      fontSize=2
     }
   } else{
     fontSize=20

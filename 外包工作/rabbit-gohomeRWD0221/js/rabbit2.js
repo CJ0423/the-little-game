@@ -662,7 +662,8 @@ function checkAns() {
         // console.table(trueAns)
     }
     let check = false
-
+    console.log(trueAns.length)
+    console.log(clickRabbits)
     if (trueAns.length != clickRabbits) {
         noticeinformation(0)
         return
@@ -674,6 +675,7 @@ function checkAns() {
 
 
         if ((trueAns[i].classList[1]) != (Answer[i])) {
+            console.log("有嗎")
             clearInterval(thirddMove)
             noticeinformation(1)
             return false
@@ -746,24 +748,34 @@ function noticeinformation(i) {
     let youtText = ""
    
     for (j = 0; j < trueAns.length; j++) {
-        if(level<6){
+        if(level<=10){
         rightRext += `${AnswerCard[trueAns[j].classList[1]]} `}
-        if(level>=6){
-            rightRext=`${AnswerCard[trueAns[j].classList[1]]} ${rightRext} `
-            console.log( rightRext)
-        }
+        // if(level>=6){
+        //     rightRext=`${AnswerCard[trueAns[j].classList[1]]} ${rightRext} `
+        //     console.log( rightRext)
+        // }
         youtText += `${AnswerCard[yourAns[j].classList[2]]} `
     }
     if (i == 0) {
         iknow.style.visibility = "visible"
-        noticeText.innerHTML = `糟糕！車子走了！<br>
-        正確順序為：${rightRext}<br>`
+        if(level<6){
+        noticeText.innerHTML = `糟糕！車子走了！<br>『先下車的兔子，要先上車』，<br>
+        所以正確上車順序為：${rightRext}`}
+        if(level>=6){
+            noticeText.innerHTML = `糟糕！車子走了！<br>『後下車的兔子，要先上車』，<br>
+            所以正確上車順序為：${rightRext}`
+        }
     }
     if (i == 1) {
         iknow.style.visibility = "visible"
-        noticeText.innerHTML = `順序錯誤，火車不動了<br>
-        正確順序為：${rightRext}<br>
-        您的順序為：${youtText}。`
+        if(level<6){
+        noticeText.innerHTML = `順序錯誤，火車不動了<br>『先下車的兔子，要先上車』，<br>
+        所以正確上車順序為：${rightRext}<br>`}
+        // 您的順序為：${youtText}。
+        if(level>=6){
+            noticeText.innerHTML = `順序錯誤，火車不動了<br>『後下車的兔子，要先上車』，<br>
+            所以正確上車順序為：${rightRext}<br>`
+        }
     }
     if (i == 6) {
         noticeText.innerHTML = `現在上車的方式為：
@@ -781,8 +793,6 @@ function noticeinformation(i) {
         level=1
         chance = [[3, 2, 1, 0], [0, 1, 2, 3], [0, 3, 2, 1], [2, 3, 0, 1]]
         score.textContent = `分數:0`
-
-
     }
 
 }
@@ -805,7 +815,3 @@ document.addEventListener("rabbitsDown", function () {
 });
 reset.addEventListener("click", resetRabbits)
 goHome.addEventListener("click", checkAns)
-// document.addEventListener("gohome",()=>{
-//     // 第一隻兔子落下三秒後出發
-//     setTimeout(goToHome,3000)
-// })
