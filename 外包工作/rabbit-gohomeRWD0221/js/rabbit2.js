@@ -26,8 +26,8 @@ let chance = [[3, 2, 1, 0], [0, 1, 2, 3], [0, 3, 2, 1], [2, 3, 0, 1]]
 // 隨機顏色
 const radditColor = ["b", "g", "p", "r", "y"]
 const AnswerCard = {
-    b: '蓝色',
-    g: '绿色',
+    b: '藍色',
+    g: '綠色',
     p: '紫色',
     r: '红色',
     y: '黄色'
@@ -46,12 +46,11 @@ rabbits.style.left = '61%';
 
 
 function start() {
-    station.style = "left:unset;top:unset"
     reset.style.visibility = "hidden"
     count = 0
     goHome.style.visibility = "hidden"
     iknow.style.visibility = "hidden"
-    level = 1
+    level = level
     checkIknow = 1
     notice.style.visibility = "hidden"
     btn.style.visibility = "visible"
@@ -69,8 +68,7 @@ function start() {
     // 確保車車歸零
     clearInterval(thirddMove)
     // 恢復原本模式
-    chance = [[3, 2, 1, 0], [0, 1, 2, 3], [0, 3, 2, 1], [2, 3, 0, 1]]
-    score.textContent = `分數:0`
+
 
 
     document.dispatchEvent(new Event("gameing"))
@@ -274,7 +272,7 @@ function moveCar() {
 
             }, 35)
         }
-            , 14500)
+            , 16500)
     }
     if (level >= 6) {
         setTimeout(() => {
@@ -309,7 +307,7 @@ function moveCar() {
                         checkAns()
                     }
                 }
-                if (baseCars >=80) {
+                if (baseCars >=100) {
           
                     clearInterval(thirddMove)
                 }
@@ -317,7 +315,7 @@ function moveCar() {
 
             }, 35)
         }
-            , 15500) //原本是11500
+            , 17500) //原本是11500
                     // 多三秒為14500
                     // 多五秒為16500
     }
@@ -426,7 +424,11 @@ function rabbitWalk(j, i) {
     setTimeout(() => {
         console.log("可以點了")
         rabbits.forEach(function (value, index, array) {
+            choseAns = Array.from(document.querySelectorAll(".noAns"))
             array[index].addEventListener("click", choseRabbit);
+            if(level>=6){
+                choseAns.reverse()
+            }
         });
     }, 5000);
 
@@ -456,7 +458,7 @@ function rabbitWalk(j, i) {
                     clearInterval(rabbitsDown0);
                 }
                 stop0++
-            }, 3);
+            }, 5);
     }
     if(level<6){
     if (i == 1) {
@@ -494,7 +496,7 @@ function rabbitWalk(j, i) {
                     clearInterval(rabbitsDown1);
                 }
                 stop1++
-            }, 3);
+            }, 5);
     }}
     if(level>=6){
         if (i == 1) {
@@ -532,7 +534,7 @@ function rabbitWalk(j, i) {
                         clearInterval(rabbitsDown1);
                     }
                     stop1++
-                }, 3);
+                }, 5);
         }
     } if(level<6){
     if (i == 2) {
@@ -562,7 +564,7 @@ function rabbitWalk(j, i) {
                     clearInterval(rabbitsDown2);
                 }
                 stop2++
-            }, 3);
+            }, 5);
     }}
     if(level>=6){
         if (i == 2) {
@@ -593,7 +595,7 @@ function rabbitWalk(j, i) {
                         clearInterval(rabbitsDown2);
                     }
                     stop2++
-                }, 3);
+                }, 5);
         }
     }
     if (i == 3) {//路徑還沒改
@@ -623,7 +625,7 @@ function rabbitWalk(j, i) {
                     clearInterval(rabbitsDown3);
                 }
                 stop3++
-            }, 3);
+            }, 5);
     }
 }
 // 可以選擇
@@ -632,7 +634,7 @@ function choseRabbit() {
     clickRabbits = clickRabbits + 1
     reset.style.visibility = "visible"
     this.style.visibility = "hidden"
-    choseAns = document.querySelectorAll(".noAns")
+//    移動到428了 choseAns = document.querySelectorAll(".noAns")
     choseAns[numberOfRabbits].classList
         .add(this.classList[1])
     numberOfRabbits++
@@ -741,7 +743,12 @@ function noticeinformation(i) {
     let youtText = ""
    
     for (j = 0; j < trueAns.length; j++) {
-        rightRext += `${AnswerCard[trueAns[j].classList[1]]} `
+        if(level<6){
+        rightRext += `${AnswerCard[trueAns[j].classList[1]]} `}
+        if(level>=6){
+            rightRext=`${AnswerCard[trueAns[j].classList[1]]} ${rightRext} `
+            console.log( rightRext)
+        }
         youtText += `${AnswerCard[yourAns[j].classList[2]]} `
     }
     if (i == 0) {
@@ -756,7 +763,7 @@ function noticeinformation(i) {
         您的順序為：${youtText}。`
     }
     if (i == 6) {
-        noticeText.innerHTML = `現在的座位安排方式為：
+        noticeText.innerHTML = `現在上車的方式為：
         後下車就先上車喔`
         iknow.style.visibility = "hidden"
         let iknow2 = document.querySelector(".iknow2")
@@ -767,6 +774,10 @@ function noticeinformation(i) {
         `
         iknow.style.visibility = "visible"
         iknow.innerHTML="再次挑戰！"
+        station.style = "left:unset;top:unset"
+        level=1
+        chance = [[3, 2, 1, 0], [0, 1, 2, 3], [0, 3, 2, 1], [2, 3, 0, 1]]
+        score.textContent = `分數:0`
 
 
     }

@@ -32,7 +32,7 @@ function resize_canvas() {
       fontSize = 12;
     }
   } else{
-    fontSize=28
+    fontSize=22
   }
   
   noticeBox.style.cssText = `
