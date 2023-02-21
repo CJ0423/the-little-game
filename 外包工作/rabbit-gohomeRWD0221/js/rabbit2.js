@@ -6,6 +6,7 @@ const notice = document.querySelector('.notice-box')
 const noticeText = document.querySelector('.notice-box-text')
 const score = document.querySelector(".score")
 const station = document.querySelector(".station")
+const checkText=document.querySelector(".check-text")
 // 按鈕相關
 const iknow = document.querySelector('.iknow')
 let iknow2 = document.querySelector(".iknow2")
@@ -29,7 +30,7 @@ const AnswerCard = {
     b: '藍色',
     g: '綠色',
     p: '紫色',
-    r: '红色',
+    r: '紅色',
     y: '黄色'
 }
 const radditColorNumber = [0, 1, 2, 3, 4, 5]
@@ -422,7 +423,8 @@ function rabbitWalk(j, i) {
 
 
     setTimeout(() => {
-        console.log("可以點了")
+        checkText.style.visibility="visible"
+     
         rabbits.forEach(function (value, index, array) {
             choseAns = Array.from(document.querySelectorAll(".noAns"))
             array[index].addEventListener("click", choseRabbit);
@@ -647,6 +649,7 @@ function choseRabbit() {
 // 按下回家
 function checkAns() {
     count++
+    checkText.style.visibility="hidden"
     let trueAns = Array.from(document.querySelectorAll(".old"))
     // 不可以在點擊兔兔了
     trueAns.forEach(function (rabbit) {

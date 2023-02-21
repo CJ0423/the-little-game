@@ -32,14 +32,28 @@
   background-color: rgb(27, 147, 255);
   position: absolute;
   top: 0%;
+  overflow: visible;
 }
 .allimg .all .text .title {
-  width: 20%;
-  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 2%;
+  width: 100%;
+  height: 130%;
   background-image: url(../img/title.svg);
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
+}
+@media (max-width: 1200px) {
+  .allimg .all .text .title {
+    height: 110%;
+  }
+}
+@media (max-width: 630px) {
+  .allimg .all .text .title {
+    height: 100%;
+  }
 }
 .allimg .all .text .score {
   font-size: 16px;
@@ -115,6 +129,8 @@
   visibility: hidden;
 }
 .allimg .all .btn {
+  overflow: visible;
+  visibility: visible !important;
   width: 300px;
   height: 50px;
   position: absolute;
@@ -133,6 +149,33 @@
 }
 @media (max-width: 630px) {
   .allimg .all .btn {
+    font-size: 5px;
+  }
+}
+.allimg .all .btn .check-text {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1% 1%;
+  display: flex;
+  align-items: center;
+  background-color: #FFFBC7;
+  color: #db6aab;
+  border-radius: 8px;
+  position: absolute;
+  top: -1100%;
+  left: 188%;
+}
+@media (max-width: 1200px) {
+  .allimg .all .btn .check-text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 630px) {
+  .allimg .all .btn .check-text {
     font-size: 5px;
   }
 }

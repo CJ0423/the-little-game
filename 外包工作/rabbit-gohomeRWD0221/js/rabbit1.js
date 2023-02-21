@@ -24,15 +24,15 @@ function resize_canvas() {
   let fontSize=0
   
   if (window.innerWidth < 1100) {
-    fontSize = 20;
+    fontSize = 16;
     if (window.innerWidth < 790) {
-      fontSize = 16;
+      fontSize = 14;
     }
-    if (window.innerWidth < 614) {
-      fontSize = 12;
+    if (window.innerWidth < 700) {
+      fontSize = 10;
     }
   } else{
-    fontSize=22
+    fontSize=20
   }
   
   noticeBox.style.cssText = `
