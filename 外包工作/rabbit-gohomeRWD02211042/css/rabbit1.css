@@ -70,8 +70,8 @@
   align-items: center;
   width: 700px;
   height: 300px;
-  min-width: 268px;
-  min-height: 116px;
+  min-width: 320px;
+  min-height: 140px;
   padding: 1% 2%;
   background-color: #8B5E3C;
   box-shadow: 0px 0px 10px #4b2700;
@@ -103,20 +103,24 @@
   width: 100%;
   height: 75%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .allimg .all .notice-box .notice-box-right .notice-box-arrows {
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: flex-end;
+  margin-left: auto;
 }
 .allimg .all .notice-box .notice-box-right .notice-box-arrows .iknow {
   padding: 1% 1%;
-  font-size: 100%;
+  font-size: 22px;
   display: flex;
   align-items: center;
   background-color: #da660d;
   border-radius: 8%;
+  position: absolute;
   cursor: pointer;
 }
 .allimg .all .notice-box .notice-box-right .notice-box-arrows .iknow:hover {
@@ -152,6 +156,7 @@
   }
 }
 .allimg .all .btn .check-text {
+  font-size: 24px;
   visibility: hidden;
   display: flex;
   align-items: center;
@@ -167,16 +172,6 @@
   position: absolute;
   top: -1100%;
   left: 188%;
-}
-@media (max-width: 1200px) {
-  .allimg .all .btn .check-text {
-    font-size: 18px;
-  }
-}
-@media (max-width: 630px) {
-  .allimg .all .btn .check-text {
-    font-size: 5px;
-  }
 }
 .allimg .all .btn .go-home {
   display: none !important;
