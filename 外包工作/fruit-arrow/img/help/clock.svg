@@ -1,0 +1,46 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="150px" height="150px" viewBox="0 0 150 150">
+<defs>
+<g id="______0_Layer1_0_FILL">
+<path fill="#FFFFFF" stroke="none" d="
+M 440.3 -25.4
+Q 426.15 -25.4 416.1 -15.4 406.1 -5.35 406.1 8.8 406.1 23 416.1 33 426.15 43.05 440.3 43.05 454.5 43.05 464.5 33 474.55 23 474.55 8.8 474.55 -5.35 464.5 -15.4 454.5 -25.4 440.3 -25.4 Z"/>
+</g>
+
+<g id="______0_Layer1_1_FILL">
+<path fill="#FF9900" stroke="none" d="
+M 78 39
+Q 78 31.05 74.95 23.8 71.95 16.8 66.55 11.45 61.15 6.05 54.15 3.05 46.9 0 38.95 0 31 0 23.8 3.05 16.8 6.05 11.4 11.45 6 16.8 3.05 23.8 0 31.05 0 39 0 46.9 3.05 54.15 6 61.15 11.4 66.55 16.8 71.95 23.8 74.95 31 78 38.95 78 46.9 78 54.15 74.95 61.15 71.95 66.55 66.55 71.95 61.15 74.95 54.15 78 46.9 78 39
+M 51.15 10.25
+Q 56.75 12.6 61.05 16.95 65.35 21.25 67.75 26.85 70.2 32.65 70.2 39 70.2 45.35 67.75 51.15 65.35 56.75 61.05 61.05 56.75 65.35 51.15 67.75 45.35 70.2 39 70.2 32.65 70.2 26.85 67.75 21.25 65.35 16.95 61.05 12.6 56.75 10.25 51.15 7.8 45.35 7.8 39 7.8 32.65 10.25 26.85 12.6 21.25 16.95 16.95 21.25 12.6 26.85 10.25 32.65 7.8 39 7.8 45.35 7.8 51.15 10.25 Z"/>
+</g>
+
+<path id="______0_Layer1_1_MEMBER_0_1_STROKES" stroke="#FF6699" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 39.75 19.65
+L 39.75 42.4"/>
+
+<path id="______0_Layer1_1_MEMBER_1_1_STROKES" stroke="#FF6699" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 39.75 44.25
+L 54 34.8"/>
+</defs>
+
+<g transform="matrix( 1.88616943359375, 0, 0, 1.88616943359375, 22.75,17.75) ">
+<g transform="matrix( 0.96051025390625, 0, 0, 0.96051025390625, -9.4,-6.75) ">
+<g transform="matrix( 1, 0, 0, 1, -400.85,29.6) ">
+<use xlink:href="#______0_Layer1_0_FILL"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#______0_Layer1_1_FILL"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,-4) ">
+<use xlink:href="#______0_Layer1_1_MEMBER_0_1_STROKES"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,-4) ">
+<use xlink:href="#______0_Layer1_1_MEMBER_1_1_STROKES"/>
+</g>
+</g>
+</g>
+</svg>
