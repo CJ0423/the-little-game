@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" />
+<link rel="stylesheet" href="../css/fruit.css">
+
+<body>
+    <div class="allimg">
+        <div class="all">
+            <!-- 老師的文字 -->
+            <div class="notice-box">
+                <!--  noticeBox -->
+                <div class="notice-box-right">
+                    <!-- noticeBoxText -->
+                    <div class="notice-box-text">
+                        根據鑰匙提示，轉動外環。<br>
+                        鑰匙+1代表順時針轉1格，-1代表逆時針轉1格。<br>
+                        外環字母為密文，對應到的內環字母就是明文。<br>
+                        輸入答案後送出。總共有10題喔！
+                    </div>
+                    <div class="notice-box-arrows">
+                        <span class="iknow">我知道了</span>
+                        <span class="iknow iknow2">我知道了</span>
+                    </div>
+                </div>
+                <div class="notice-box-left">
+                    <img class="teacher" src="../img/notice/notice.svg" alt="image">
+                </div>
+            </div>
+            <!-- 老師的文字 -->
+
+            <div class="item">
+           
+                <div class="outside">
+                    <div class="can-play">
+                        <input class="text-box" placeholder="請輸入英文"></input>
+                        <div class="enter">
+                            送出
+                        </div>
+                        <div class="continue-btn">
+                            繼續
+                        </div>
+                 
+                        <a id="go-some-where" href="https://www.eduweb.com.tw/" target="_blank"><div class="logo"></div></a>
+                        <div class="music-btn">
+              
+                        </div>
+                    </div>
+                    <div class="reds">
+                        <div class="red a"></div>
+                        <div class="red b"></div>
+                        <div class="red c"></div>
+                        <div class="red d"></div>
+                        <div class="red e"></div>
+                        <div class="red f"></div>
+                        <div class="red g"></div>
+                        <div class="red h"></div>
+                        <div class="red i"></div>
+                        <div class="red j"></div>
+                        <div class="red k"></div>
+                        <div class="red l"></div>
+                        <div class="red m"></div>
+                        <div class="red n"></div>
+                        <div class="red o"></div>
+                        <div class="red p"></div>
+                        <div class="red q"></div>
+                        <div class="red r"></div>
+                        <div class="red s"></div>
+                        <div class="red t"></div>
+                        <div class="red u"></div>
+                        <div class="red v"></div>
+                        <div class="red w"></div>
+                        <div class="red x"></div>
+                        <div class="red y"></div>
+                        <div class="red z"></div>
+                    </div>
+                    <div class="discs">
+                        <div class="disc-big">
+                        </div>
+
+                        <div class="disc-small">
+                            <!--  -->
+
+                            <!--  -->
+                            <div class="answer">
+                                <div class="true-answer"></div>
+                                <div class="answer-text">
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inside">
+                    <div class="left-img">
+                        <div class="title"></div>
+                        <div class="levels">
+                            <div class="level">第 1 題</div>
+                            <div class="password">BQQMF</div>
+                        </div>
+                        <div class="teacher-left"></div>
+                    </div>
+                    <div class="right-img">
+                        <div class="time-check">
+                            <div class="time-score">
+                                <div class="time">60</div>
+                                <div class="score">0</div>
+                            </div>
+                            <div class="information">-1</div>
+
+                        </div>
+                        <div class="btns">
+                            <div class="reset">復原圓盤</div>
+                            <div class="notice-in-game">說明</div>
+                        </div>
+                        <div class="player-text">
+                            <div class="sample"><br>您輸入的答案</div>
+                            <div class="player-input-text">APPLE</div>
+                            <div class="fall-suc-teacher"></div>
+                        </div>
+              
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <audio id="bgm" src="../audio/audioAll/back.mp3" loop></audio>
+    <audio id="right" src="../audio/audioAll/right.mp3" ></audio>
+    <audio id="wrong" src="../audio/audioAll/wrong.mp3" ></audio>
+    <audio id="pass" src="../audio/audioAll/pass.mp3" ></audio>
+    <audio id="not-pass" src="../audio/audioAll/notpass.mp3" ></audio>
+    <script src="../js/fruit1.js"></script>
+    <script src="../js/fruitFix.js"></script>
+    <script src="../js/fruit2.js"></script>
+</body>
+
+</html>
