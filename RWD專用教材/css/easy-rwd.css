@@ -1,0 +1,50 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.all {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.item {
+  width: 50%;
+  max-width: 400px;
+  min-width: 300px;
+  height: 70%;
+  margin: auto auto;
+}
+.item h1 {
+  width: 100%;
+  text-align: center;
+}
+.item .my-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid black;
+}
+.item .my-form label {
+  margin-bottom: 10px;
+}
+.item .my-form input[type=text] {
+  max-width: 70%;
+  min-width: 100px;
+}
+.item .my-form input[type=submit], .item .my-form input[type=reset] {
+  min-width: 100px;
+  margin-top: 20px;
+  margin-right: auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0077cc;
+  color: #fff;
+  cursor: pointer;
+}
+.item .my-form input[type=submit]:hover,
+.item .my-form input[type=reset]:hover {
+  background-color: #005fa3;
+}/*# sourceMappingURL=easy-rwd.css.map */

@@ -1,0 +1,46 @@
+// 第一階段
+
+.all {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: antiquewhite;
+    width: 1280px;
+    height: 720px;
+    }
+
+    .item {
+    width: 700px;
+    height: 600px;
+    h1{
+        text-align: center;
+    }
+    .my-form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding: 20px;
+        border: 1px solid black;
+        label {
+            margin-bottom: 10px;
+            }
+            input{
+                width: 200px;
+            }
+            input[type="submit"], input[type="reset"] {
+                margin-top: 20px;
+                padding: 10px 20px;
+                border: none;
+                background-color: #0077cc;
+                color: #fff;
+                cursor: pointer;
+                }
+                input[type="submit"]:hover,
+                input[type="reset"]:hover {
+                    background-color: #005fa3;
+                }
+        }
+    }
+    
+    
+  

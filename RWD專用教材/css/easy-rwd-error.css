@@ -1,0 +1,40 @@
+.all {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: antiquewhite;
+  width: 1280px;
+  height: 720px;
+}
+
+.item {
+  width: 700px;
+  height: 600px;
+}
+.item h1 {
+  text-align: center;
+}
+.item .my-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid black;
+}
+.item .my-form label {
+  margin-bottom: 10px;
+}
+.item .my-form input {
+  width: 200px;
+}
+.item .my-form input[type=submit], .item .my-form input[type=reset] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0077cc;
+  color: #fff;
+  cursor: pointer;
+}
+.item .my-form input[type=submit]:hover,
+.item .my-form input[type=reset]:hover {
+  background-color: #005fa3;
+}/*# sourceMappingURL=easy-rwd-error.css.map */
