@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡單計算機</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>簡單計算機</h1>
+    <label for="num1">數字 1：</label>
+    <input type="text" id="num1" />
+    <br><br>
+    <label for="operator">運算符號：</label>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br><br>
+    <label for="num2">數字 2：</label>
+    <input type="text" id="num2" />
+    <br><br>
+    <input type="submit" value="計算" onclick="calculate()" />
+    <br><br>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            // parseFloat：將字串變成可以有小數點的數字
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const operator = document.getElementById("operator").value;
+            const result = document.getElementById("result");
+            let answer = 0;
+            
+            switch (operator) {
+                case "+":
+                    answer = num1 + num2;
+                    break;
+                case "-":
+                    answer = num1 - num2;
+                    break;
+                case "*":
+                    answer = num1 * num2;
+                    break;
+                case "/":
+                    answer = num1 / num2;
+                    break;
+                    // default是做什麼的呢
+                default:
+                    result.innerHTML = "不支援此運算符號";
+                    return;
+            }
+            result.innerHTML = answer;
+        }
+    </script>
+</body>
+</html>

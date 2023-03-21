@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成績判斷</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>請輸入您的成績：</h1>
+    <input type="text" id="score" placeholder="成績" />
+    <input type="submit" value="送出" onclick="checkScore()" />
+    <p id="result"></p>
+
+    <script>
+        function checkScore() {
+            // 試試看改成queryselector的寫法吧
+            const score = document.getElementById("score").value;
+            const result = document.getElementById("result");
+            
+            if (score >= 60) {
+                result.innerHTML = "你及格了！";
+            } else {
+                // innerHTML是做什麼的呢？
+                result.innerHTML = "你不及格！";
+            }
+        }
+    </script>
+</body>
+</html>

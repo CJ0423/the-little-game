@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成績判斷</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>請輸入您的成績：</h1>
+    <input type="text" id="score" placeholder="成績" />
+    <input type="submit" value="送出" onclick="checkScore()" />
+    <p id="result"></p>
+
+    <script>
+        function checkScore() {
+            const score = document.querySelector("#score").value;
+            const result = document.querySelector("#result");
+            
+            if (score >= 90) {
+                result.innerHTML = "優等";
+            } else if (score >= 80) {
+                result.innerHTML = "不錯";
+            } else if (score >= 70) {
+                result.innerHTML = "還可以";
+            } else if (score >= 60) {
+                result.innerHTML = "很危險";
+            } else {
+                result.innerHTML = "太糟糕了";
+            }
+        }
+    </script>
+</body>
+</html>
